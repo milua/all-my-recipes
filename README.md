@@ -1,16 +1,16 @@
-# all_my_recipes
+# All My Recipes
+We often look for recipes on multiple websites. All My Recipes is an android app which allows the user to save favorite recipes in one place. The app makes it easier to export missing ingredients in a shopping list.
 
-A new Flutter application.
+**Preview on some screens:**
+
+![All My Recipes - Recipe List](doc/img/landing-page.png "All My Recipes - Recipe List") ![All My Recipes - Add Recipe](doc/img/add-recipe.png "All My Recipes - Add Recipe") ![All My Recipes - Recipe](doc/img/recipe.png "All My Recipes - Recipe")
+
+## Demo
+Here is a link to the prototype: https://bit.ly/3yxZ8qN
+
+## Prerequisites
+- An editor (e.g. Android Studio or IntelliJ)
+- A (virtual) device for testing to Android app
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Select your target device and run `main.dart`.
