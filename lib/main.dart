@@ -1,3 +1,4 @@
+import 'package:all_my_recipes/addrecipe/add-recipe-page.dart';
 import 'package:all_my_recipes/allrecipes/all-recipes.dart';
 import 'package:flutter/material.dart';
 
@@ -10,12 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'All My Recipes',
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: AllRecipesPage()
-    );
+        title: 'All My Recipes',
+        theme: ThemeData(
+          primarySwatch: Colors.purple,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: AllRecipesPage(),
+        routes: {
+          '/allrecipes': (context) => AllRecipesPage(),
+          '/addrecipe': (context) => AddRecipePage(),
+        });
   }
 }

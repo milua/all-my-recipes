@@ -2,7 +2,7 @@ import 'package:all_my_recipes/addrecipe/add-recipe-page.dart';
 import 'package:flutter/material.dart';
 
 class AllRecipesPage extends StatefulWidget {
-  AllRecipesPage({Key key}) : super(key: key);
+  AllRecipesPage({Key? key}) : super(key: key);
 
   @override
   _AllRecipesPageState createState() => _AllRecipesPageState();
@@ -15,23 +15,50 @@ class _AllRecipesPageState extends State<AllRecipesPage> {
       appBar: AppBar(
         title: Text('All Recipe'),
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            ListTile(
+              title: const Text('All Recipes'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/allrecipes');
+              },
+            ),
+            ListTile(
+              title: const Text('Add Recipes'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/addrecipe');
+              },
+            ),
+            ListTile(
+              title: const Text('Shopping List'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/shoppinglist');
+              },
+            ),
+          ],
+        ),
+      ),
       body: ListView(
-        padding: const EdgeInsets.all(8),
         children: <Widget>[
           Container(
+            padding: EdgeInsets.all(8),
             height: 50,
-            color: Colors.amber[600],
-            child: const Center(child: Text('Korean Fried Chicken')),
+            child: Text('Korean Fried Chicken'),
           ),
           Container(
+            padding: EdgeInsets.all(8),
             height: 50,
-            color: Colors.amber[500],
-            child: const Center(child: Text('Curry Soy Glass Noodles')),
+            child: Text('Curry Soy Glass Noodles'),
           ),
           Container(
+            padding: EdgeInsets.all(8),
             height: 50,
-            color: Colors.amber[100],
-            child: const Center(child: Text('Flan')),
+            child: Text('Flan'),
           ),
         ],
       ),
