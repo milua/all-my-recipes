@@ -4,7 +4,9 @@ We often look for recipes on multiple websites. All My Recipes is an android app
 **Preview on some screens:**
 
 ![All My Recipes - Recipe List](doc/img/landing-page.png "All My Recipes - Recipe List")
+
 ![All My Recipes - Add Recipe](doc/img/add-recipe.png "All My Recipes - Add Recipe")
+
 ![All My Recipes - Recipe](doc/img/recipe.png "All My Recipes - Recipe")
 
 ## Demo
