@@ -1,3 +1,4 @@
+import 'package:all_my_recipes/entities/recipe.dart';
 import 'package:flutter/material.dart';
 
 class AddRecipePage extends StatefulWidget {
@@ -8,8 +9,10 @@ class AddRecipePage extends StatefulWidget {
 }
 
 class _AddRecipePageState extends State<AddRecipePage> {
+
   @override
   Widget build(BuildContext context) {
+    final RecipeForm formValue = RecipeForm();
     final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
     return Scaffold(
@@ -38,6 +41,7 @@ class _AddRecipePageState extends State<AddRecipePage> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter the name of this recipe';
                       }
+                      formValue.title = value;
                       return null;
                     },
                   ),
@@ -58,6 +62,7 @@ class _AddRecipePageState extends State<AddRecipePage> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter at least one ingredient';
                       }
+                      formValue.ingredients["100g"] = value;
                       return null;
                     },
                   ),
@@ -72,6 +77,7 @@ class _AddRecipePageState extends State<AddRecipePage> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter at least one ingredient';
                       }
+                      formValue.ingredients["200g"] = value;
                       return null;
                     },
                   ),
@@ -84,6 +90,7 @@ class _AddRecipePageState extends State<AddRecipePage> {
                     )),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
+                  // TODO time picker
                   child: TextFormField(
                     decoration: const InputDecoration(
                       hintText: 'e.g. 1h 23min',
@@ -92,6 +99,7 @@ class _AddRecipePageState extends State<AddRecipePage> {
                       if (value == null || value.isEmpty) {
                         return 'Please the (estimated) time of this recipe';
                       }
+                      // formValue.times["Bake Time"] = DateTime.parse(value);
                       return null;
                     },
                   ),
@@ -112,6 +120,7 @@ class _AddRecipePageState extends State<AddRecipePage> {
                       if (value == null || value.isEmpty) {
                         return 'Please the description of this recipe';
                       }
+                      formValue.description = value;
                       return null;
                     },
                   ),
@@ -125,7 +134,9 @@ class _AddRecipePageState extends State<AddRecipePage> {
                       // the form is invalid.
                       if (_formKey.currentState!.validate()) {
                         // Process data.
+
                       }
+                        print(formValue.toString());
                     },
                     child: const Text('SAVE RECIPE'),
                   ),
